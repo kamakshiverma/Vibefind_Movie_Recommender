@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><B>Pick a Movie For Me 🎬</B></title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="container">
+    <h1><b>🎥 Pick a Movie For Me</b></h1>
+
+    <!-- Step 1: Mood -->
+    <div class="quiz-step" id="step1">
+      <h2><b>1. What's your mood?</b></h2>
+      <button onclick="selectMood('Happy')">Happy</button>
+      <button onclick="selectMood('Sad')">Sad</button>
+      <button onclick="selectMood('Romantic')">Romantic</button>
+      <button onclick="selectMood('Scared')">Scared</button>
+      <button onclick="selectMood('Inspired')">Inspired</button>
+      <button onclick="selectMood('Excited')">Excited</button>
+    </div>
+
+    <!-- Step 2: Occasion -->
+    <div class="quiz-step" id="step2" style="display:none;">
+      <h2><b>2. Who are you watching with?</b></h2>
+      <button onclick="selectOccasion('Alone')">Alone</button>
+      <button onclick="selectOccasion('Friends')">Friends</button>
+      <button onclick="selectOccasion('Family')">Family</button>
+      <button onclick="selectOccasion('Date')">Date</button>
+    </div>
+
+    <!-- Step 3: Language -->
+    <div class="quiz-step" id="step3" style="display:none;">
+      <h2><b>3. What language do you prefer?</b></h2>
+      <button onclick="selectLanguage('hi')">Hindi</button>
+      <button onclick="selectLanguage('en')">English</button>
+    </div>
+
+    <!-- Step 4: Genre -->
+    <div class="quiz-step" id="step4" style="display:none;">
+      <h2><b>4. Pick your preferred genre:</b></h2>
+      <button onclick="selectGenre('Any')">Any</button>
+      <button onclick="selectGenre('Comedy')">Comedy</button>
+      <button onclick="selectGenre('Drama')">Drama</button>
+      <button onclick="selectGenre('Action')">Action</button>
+      <button onclick="selectGenre('Romance')">Romance</button>
+    </div>
+
+    <!-- Final Result -->
+    <div class="result" id="result" style="display:none;">
+      <h2><b>🎬 Your Movie Suggestion</b></h2>
+      <div id="movieCard"></div>
+      <button onclick="getAnother()">🎲 Show Another</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
